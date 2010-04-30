@@ -17,7 +17,7 @@ http.createServer(function(req, res) {
       sys.log('Recieved Request')
     })
     .after(function(statCode) {
-      res.write('Delivered: '+req.url);
+      sys.log('Delivered: '+req.url);
       log(statCode, req.url, ip);
     })
     .error(function(statCode,msg) {
